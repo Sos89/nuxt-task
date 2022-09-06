@@ -1,6 +1,6 @@
 <template>
-  <div class="app_bar_div">
-    <v-container fluid>
+<!--  <div >-->
+    <v-container fluid class="app_bar_div">
       <v-row>
         <v-col cols="6" class="logo-div">
           <v-img
@@ -19,18 +19,14 @@
             >
             </v-img>
             <v-select
-              v-model="e1"
               :items="states"
-              width="202px"
-              class="select"
-              color="black"
-              default="black"
+              dense
             ></v-select>
           </div>
         </v-row>
       </v-row>
     </v-container>
-  </div>
+<!--  </div>-->
 </template>
 <script>
 export default {
@@ -44,15 +40,7 @@ export default {
         'Delaware', 'District of Columbia', 'Federated States of Micronesia',
         'Florida', 'Georgia', 'Guam', 'Hawaii', 'Idaho',
         'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky',
-        'Louisiana', 'Maine', 'Marshall Islands', 'Maryland',
-        'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi',
-        'Missouri', 'Montana', 'Nebraska', 'Nevada',
-        'New Hampshire', 'New Jersey', 'New Mexico', 'New York',
-        'North Carolina', 'North Dakota', 'Northern Mariana Islands', 'Ohio',
-        'Oklahoma', 'Oregon', 'Palau', 'Pennsylvania', 'Puerto Rico',
-        'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee',
-        'Texas', 'Utah', 'Vermont', 'Virgin Island', 'Virginia',
-        'Washington', 'West Virginia', 'Wisconsin', 'Wyoming',
+
       ],
     }
   }
@@ -69,7 +57,10 @@ export default {
 .app_bar_div{
     background: #FFFFFF;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    width: 100%;
     height: 64px;
+    margin: 0;
+    padding: 0;
   }
   .app_select_div{
     display: flex;
