@@ -1,8 +1,7 @@
 <template>
   <v-container>
-    <v-row justify="center" align="center">
+    <v-row>
       <v-col cols="12" sm="8" md="6">
-        dfgsd
         <form1099-n-e-c/>
       </v-col>
     </v-row>

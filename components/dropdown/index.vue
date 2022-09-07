@@ -8,12 +8,8 @@
       </div>
     </v-hover>
     <div class="dropdown-menu" v-if="menuToggleer">
-      <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
+      <ul class="ul" v-for="(value, key, index) in filings">
+        <li> <nuxt-link :to="value">{{key}}</nuxt-link></li>
       </ul>
     </div>
   </div>
@@ -21,7 +17,7 @@
 
 <script>
 export default {
-  name: "DropdownComponent",
+  name: "index",
   data () {
     return {
       menuToggleer: false
@@ -31,6 +27,8 @@ export default {
     dropdownTitle: String,
     dropdownIcon: String,
     dropdown: String,
+    item: String,
+    filings: Object
   }
 }
 </script>
@@ -52,6 +50,14 @@ export default {
   display: flex;
   align-items: center;
   color: #2B014C;
+}
+.ul{
+  margin-left: 50px;
+  cursor: pointer;
+}
+li :hover{
+  background: #2B014C;
+  color: #E5E5E5;
 }
 .dropdown-menu{
   color: #2B014C;

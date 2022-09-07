@@ -18,13 +18,14 @@
       dropdown-icon="fa-solid fa-chart-column"
       dropdown-title="Reports"
       dropdown="fa-solid fa-caret-down"
+      :filings="{'Login': '/login', 'Register': 'register', 'About': '/about'}"
     />
   </div>
 </template>
 
 <script>
 import IconMenu from "~/components/menu/iconMenu";
-import dropdown from "~/components/dropdown/dropdown";
+import dropdown from "~/components/dropdown";
 
 export default {
   name: "app-menu",

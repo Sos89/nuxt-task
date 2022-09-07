@@ -19,7 +19,7 @@ export default {
 
 <style scoped>
 .manu{
-  width: 264px!important;
+  width: calc(100% - 16px);
   display: flex;
   flex-direction: row;
   align-items: center;

@@ -1,5 +1,4 @@
 <template>
-<!--  <div >-->
     <v-container fluid class="app_bar_div">
       <v-row>
         <v-col cols="6" class="logo-div">
@@ -13,20 +12,21 @@
           <div class="app_select_div">
             <v-img
               src="/image/Rectangle-30.png"
-              max-height="32"
+              max-height="36"
               max-width="38"
               class="img"
             >
             </v-img>
             <v-select
               :items="states"
+              label="Solo field"
               dense
+              solo
             ></v-select>
           </div>
         </v-row>
       </v-row>
     </v-container>
-<!--  </div>-->
 </template>
 <script>
 export default {
@@ -59,20 +59,16 @@ export default {
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     width: 100%;
     height: 64px;
-    margin: 0;
-    padding: 0;
   }
   .app_select_div{
     display: flex;
-    align-items: center;
     width: 202px;
     height: 44px;
-    border: 1px solid #EDEDED;
+    /*border: 1px solid #EDEDED;*/
     border-radius: 10px;
     margin: 10px 24px 10px 24px;
   }
   .img{
     margin-right: 8px;
   }
-
 </style>
