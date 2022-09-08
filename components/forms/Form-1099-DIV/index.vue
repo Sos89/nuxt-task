@@ -2,7 +2,7 @@
   <v-app class="bg">
     <v-container fluid class="container">
       <v-row cols="12">
-        <h2 class="paragraph">2021 Form 1098</h2>
+        <h2 class="paragraph">2021 Form 1099-B</h2>
       </v-row>
 
       <v-row cols="12" style="margin-top: 108px">
@@ -53,53 +53,121 @@
 
       <v-row>
         <v-form class="form">
+
           <v-row class="row">
             <inputIndex
-              label="Mortgage interest received from payer(s)/borrower(s)"
+              label="1a Total ordinary dividends"
               :styling="inputStyle"
             />
             <inputIndex
-              label="Outstanding mortgage principal"
+              label="1b Qualified dividends"
               :styling="inputStyle"
             />
           </v-row>
+
           <v-row class="row">
             <inputIndex
-              label="Mortgage origination date"
+              label="2a Total capital gain distr."
               :styling="inputStyle"
             />
             <inputIndex
-              label="State tax withheld"
+              label="2b Unrecap. Sec. 1250 gain"
               :styling="inputStyle"
             />
           </v-row>
+
           <v-row class="row">
             <inputIndex
-              label="Mortgage insurance premiums"
+              label="2c Section 1202 gain"
               :styling="inputStyle"
             />
             <inputIndex
-              label="Points paid on purchase of principal residence"
+              label="2d Collectibles (28%) gain"
               :styling="inputStyle"
             />
           </v-row>
-          <v-row>
-            <div class="checkbox">
-              <checkbox
-                checkbox-label="If address of property securing mortgage is the same as PAYER’S/BORROWER’S address, check the box, or enter the address or description in box 8."
-              />
-            </div>
+
+          <v-row class="row">
+            <inputIndex
+              label="2e Section 897 Ordinary Dividends"
+              :styling="inputStyle"
+            />
+            <inputIndex
+              label="2f Section 897 Capital Gain"
+              :styling="inputStyle"
+            />
           </v-row>
+
+          <v-row class="row">
+            <inputIndex
+              label="3 Non dividend distributions"
+              :styling="inputStyle"
+            />
+            <inputIndex
+              label="4 Federal income tax withheld"
+              :styling="inputStyle"
+            />
+          </v-row>
+
+          <v-row class="row">
+            <inputIndex
+              label="5 Section 199A dividends"
+              :styling="inputStyle"
+            />
+            <inputIndex
+              label="6 Investment expenses"
+              :styling="inputStyle"
+            />
+          </v-row>
+
+          <v-row class="row">
+            <inputIndex
+              label="Foreign tax paid"
+              :styling="inputStyle"
+            />
+            <inputIndex
+              label="Foreign country or U.S. possession"
+              :styling="inputStyle"
+            />
+          </v-row>
+
+          <v-row class="row">
+            <inputIndex
+              label="Cash liquidation distributions"
+              :styling="inputStyle"
+            />
+            <inputIndex
+              label="Noncash liquidation distributions"
+              :styling="inputStyle"
+            />
+          </v-row>
+
+          <v-row class="row">
+            <inputIndex
+              label="11 Exempt-interest dividends"
+              :styling="inputStyle"
+            />
+            <inputIndex
+              label="12 Specified private activity bond interest dividends"
+              :styling="inputStyle"
+            />
+          </v-row>
+
+          <v-row class="row">
+            <selects
+              label="State"
+              :stylings="inputStyle"
+            />
+            <inputIndex
+              label="State identification no."
+              :styling="inputStyle"
+            />
+          </v-row>
+
           <v-row class="row">
             <div class="row_state">
               <inputIndex
-                label="Address or description of property securing mortgage (see instructions)"
-                :styling="addressInput"
-              />
-            </div>
-            <div class="mr-auto data">
-              <inputIndex
-                label="Mortgage acquisition date"
+                label="State identification no."
                 :styling="inputStyle"
               />
             </div>
@@ -148,7 +216,8 @@ export default {
         'width': '200px',
         'height': '48px',
         'margin-right': '8px',
-        'border-radius': '10px'
+        'border-radius': '10px',
+        'background': 'withe'
       },
       inputStyle: {
         'width': '508px',
@@ -238,7 +307,7 @@ export default {
   justify-content: space-around;
 }
 .row_state{
-  width: 100%;
+  width: 100% !important;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -250,7 +319,5 @@ export default {
 .btn{
   margin-bottom: 32px;
 }
-.data{
-  margin-left: 10px;
-}
 </style>
+

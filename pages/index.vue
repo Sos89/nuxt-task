@@ -6,7 +6,11 @@
 <!--        <form1098/>-->
 <!--        <form1098T/>-->
 <!--        <form-w2/>-->
-        <form1099B/>
+<!--        <form1099B/>-->
+<!--        <form1099-c/>-->
+<!--        <form1099-i-n-t/>-->
+<!--        <form1099R/>-->
+        <form1099-d-i-v/>
       </v-col>
     </v-row>
   </v-container>
@@ -18,8 +22,22 @@ import form1098 from "~/components/forms/Form-1098"
 import form1098T from "~/components/forms/Form-1098-T"
 import formW2 from "~/components/forms/Form-W-2"
 import form1099B from "~/components/forms/Form-1099-B";
+import form1099C from "~/components/forms/Form-1099-C";
+import form1099INT from "~/components/forms/Form-1099-INT";
+import form1099R from "~/components/forms/Form-1099-R";
+import form1099DIV from "~/components/forms/Form-1099-DIV";
 export default {
   name: 'IndexPage',
-  components: {Form1099NEC, form1098, form1098T, formW2, form1099B},
+  components: {
+    Form1099NEC,
+    form1098,
+    form1098T,
+    formW2,
+    form1099B,
+    form1099C,
+    form1099INT,
+    form1099R,
+    form1099DIV
+  },
 }
 </script>

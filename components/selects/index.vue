@@ -1,12 +1,5 @@
 <template>
   <div>
-<!--    <v-select-->
-<!--      :style="getStyle"-->
-<!--      :items="items"-->
-<!--      label="Outlined style"-->
-<!--      dense-->
-<!--      outlined-->
-<!--    ></v-select>-->
     <v-autocomplete
       :items="items"
       :style="getStyle"

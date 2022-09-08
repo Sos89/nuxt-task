@@ -2,7 +2,7 @@
   <v-app class="bg">
     <v-container fluid class="container">
       <v-row cols="12">
-        <h2 class="paragraph">2021 Form 1098</h2>
+        <h2 class="paragraph">2021 Form 1099-B</h2>
       </v-row>
 
       <v-row cols="12" style="margin-top: 108px">
@@ -53,19 +53,84 @@
 
       <v-row>
         <v-form class="form">
+
           <v-row class="row">
             <inputIndex
-              label="Mortgage interest received from payer(s)/borrower(s)"
+              label="Gross distribution"
               :styling="inputStyle"
             />
             <inputIndex
-              label="Outstanding mortgage principal"
+              label="Taxable amount"
               :styling="inputStyle"
             />
           </v-row>
+
+          <v-row class="row">
+            <div class="checkbox">
+              <checkbox
+                checkbox-label="Taxable amount not determined"
+              />
+            </div>
+            <div class="checkbox">
+              <checkbox
+                checkbox-label="Total distribution"
+              />
+            </div>
+          </v-row>
+
           <v-row class="row">
             <inputIndex
-              label="Mortgage origination date"
+              label="Capital gain (included in box 2a)"
+              :styling="inputStyle"
+            />
+            <inputIndex
+              label="Federal income tax withheld"
+              :styling="inputStyle"
+            />
+          </v-row>
+
+          <v-row>
+            <div class="row_state">
+              <inputIndex
+                label="Employee contributions/ Designated Roth contributions or insurance premiums"
+                :styling="addressInput"
+              />
+            </div>
+          </v-row>
+
+          <v-row class="row">
+            <inputIndex
+              label="Net unrealized appreciation in employer's securities"
+              :styling="inputStyle"
+            />
+            <inputIndex
+              label="Distribution code(s)"
+              :styling="inputStyle"
+            />
+          </v-row>
+
+          <v-row class="row">
+            <div class="checkbox">
+              <checkbox
+                checkbox-label="IRA/SEP/SIMPLE"
+              />
+            </div>
+          </v-row>
+
+          <v-row class="row">
+            <inputIndex
+              label="Other $"
+              :styling="inputStyle"
+            />
+            <inputIndex
+              label="Your percentage of total distribution"
+              :styling="inputStyle"
+            />
+          </v-row>
+
+          <v-row class="row">
+            <inputIndex
+              label="Total employee contributions"
               :styling="inputStyle"
             />
             <inputIndex
@@ -73,36 +138,38 @@
               :styling="inputStyle"
             />
           </v-row>
+
           <v-row class="row">
-            <inputIndex
-              label="Mortgage insurance premiums"
-              :styling="inputStyle"
+            <selects
+              label="State"
+              :stylings="inputStyle"
             />
             <inputIndex
-              label="Points paid on purchase of principal residence"
+              label="Payer's state no."
               :styling="inputStyle"
             />
           </v-row>
-          <v-row>
-            <div class="checkbox">
-              <checkbox
-                checkbox-label="If address of property securing mortgage is the same as PAYER’S/BORROWER’S address, check the box, or enter the address or description in box 8."
-              />
-            </div>
-          </v-row>
+
           <v-row class="row">
-            <div class="row_state">
-              <inputIndex
-                label="Address or description of property securing mortgage (see instructions)"
-                :styling="addressInput"
-              />
-            </div>
-            <div class="mr-auto data">
-              <inputIndex
-                label="Mortgage acquisition date"
-                :styling="inputStyle"
-              />
-            </div>
+            <inputIndex
+              label="State distribution"
+              :styling="inputStyle"
+            />
+            <inputIndex
+              label="Local tax withheld"
+              :styling="inputStyle"
+            />
+          </v-row>
+
+          <v-row class="row">
+            <inputIndex
+              label="Name of locality"
+              :styling="inputStyle"
+            />
+            <inputIndex
+              label="Local distribution"
+              :styling="inputStyle"
+            />
           </v-row>
 
           <v-row class="row btn">
@@ -148,7 +215,8 @@ export default {
         'width': '200px',
         'height': '48px',
         'margin-right': '8px',
-        'border-radius': '10px'
+        'border-radius': '10px',
+        'background': 'withe'
       },
       inputStyle: {
         'width': '508px',
@@ -238,7 +306,7 @@ export default {
   justify-content: space-around;
 }
 .row_state{
-  width: 100%;
+  width: 100% !important;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -250,7 +318,5 @@ export default {
 .btn{
   margin-bottom: 32px;
 }
-.data{
-  margin-left: 10px;
-}
 </style>
+

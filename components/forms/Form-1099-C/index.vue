@@ -2,7 +2,7 @@
   <v-app class="bg">
     <v-container fluid class="container">
       <v-row cols="12">
-        <h2 class="paragraph">2021 Form 1098</h2>
+        <h2 class="paragraph">2021 Form 1099-B</h2>
       </v-row>
 
       <v-row cols="12" style="margin-top: 108px">
@@ -55,54 +55,42 @@
         <v-form class="form">
           <v-row class="row">
             <inputIndex
-              label="Mortgage interest received from payer(s)/borrower(s)"
+              label="Date of identifiable event"
               :styling="inputStyle"
             />
             <inputIndex
-              label="Outstanding mortgage principal"
-              :styling="inputStyle"
-            />
-          </v-row>
-          <v-row class="row">
-            <inputIndex
-              label="Mortgage origination date"
-              :styling="inputStyle"
-            />
-            <inputIndex
-              label="State tax withheld"
+              label="Amount of debt discharged"
               :styling="inputStyle"
             />
           </v-row>
           <v-row class="row">
             <inputIndex
-              label="Mortgage insurance premiums"
+              label=" Interest, if included in box 2"
               :styling="inputStyle"
             />
             <inputIndex
-              label="Points paid on purchase of principal residence"
+              label="Debt description"
               :styling="inputStyle"
             />
           </v-row>
           <v-row>
             <div class="checkbox">
               <checkbox
-                checkbox-label="If address of property securing mortgage is the same as PAYER’S/BORROWER’S address, check the box, or enter the address or description in box 8."
+                checkbox-label="Check here if the debtor was personally liable for repayment of the debt"
               />
             </div>
           </v-row>
+
+
           <v-row class="row">
-            <div class="row_state">
-              <inputIndex
-                label="Address or description of property securing mortgage (see instructions)"
-                :styling="addressInput"
-              />
-            </div>
-            <div class="mr-auto data">
-              <inputIndex
-                label="Mortgage acquisition date"
-                :styling="inputStyle"
-              />
-            </div>
+            <selects
+              :stylings="inputStyle"
+              label="Identifiable event code"
+            />
+            <inputIndex
+              label="Fair market value of property"
+              :styling="inputStyle"
+            />
           </v-row>
 
           <v-row class="row btn">
@@ -250,7 +238,5 @@ export default {
 .btn{
   margin-bottom: 32px;
 }
-.data{
-  margin-left: 10px;
-}
 </style>
+

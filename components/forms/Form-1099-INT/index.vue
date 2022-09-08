@@ -2,7 +2,7 @@
   <v-app class="bg">
     <v-container fluid class="container">
       <v-row cols="12">
-        <h2 class="paragraph">2021 Form 1098</h2>
+        <h2 class="paragraph">2021 Form 1099-B</h2>
       </v-row>
 
       <v-row cols="12" style="margin-top: 108px">
@@ -53,56 +53,104 @@
 
       <v-row>
         <v-form class="form">
+
           <v-row class="row">
             <inputIndex
-              label="Mortgage interest received from payer(s)/borrower(s)"
+              label="2021 Form 1099-INT"
               :styling="inputStyle"
             />
             <inputIndex
-              label="Outstanding mortgage principal"
+              label="1 Interest income"
               :styling="inputStyle"
             />
           </v-row>
+
           <v-row class="row">
             <inputIndex
-              label="Mortgage origination date"
+              label="2 Early withdrawal penalty"
               :styling="inputStyle"
             />
             <inputIndex
-              label="State tax withheld"
+              label="2 Early withdrawal penalty"
               :styling="inputStyle"
             />
           </v-row>
+
           <v-row class="row">
             <inputIndex
-              label="Mortgage insurance premiums"
+              label="4 Federal income tax withheld"
               :styling="inputStyle"
             />
             <inputIndex
-              label="Points paid on purchase of principal residence"
+              label="5 Investment expenses"
               :styling="inputStyle"
             />
           </v-row>
-          <v-row>
-            <div class="checkbox">
-              <checkbox
-                checkbox-label="If address of property securing mortgage is the same as PAYER’S/BORROWER’S address, check the box, or enter the address or description in box 8."
-              />
-            </div>
-          </v-row>
+
           <v-row class="row">
-            <div class="row_state">
-              <inputIndex
-                label="Address or description of property securing mortgage (see instructions)"
-                :styling="addressInput"
-              />
-            </div>
-            <div class="mr-auto data">
-              <inputIndex
-                label="Mortgage acquisition date"
-                :styling="inputStyle"
-              />
-            </div>
+            <inputIndex
+              label="6 Foreign tax paid"
+              :styling="inputStyle"
+            />
+            <inputIndex
+              label="7 Foreign country or U.S. possession"
+              :styling="inputStyle"
+            />
+          </v-row>
+
+          <v-row class="row">
+            <inputIndex
+              label="8 Tax-exempt interest"
+              :styling="inputStyle"
+            />
+            <inputIndex
+              label="9 Specified private activity bond interest"
+              :styling="inputStyle"
+            />
+          </v-row>
+
+          <v-row class="row">
+            <inputIndex
+              label="10 Market discount"
+              :styling="inputStyle"
+            />
+            <inputIndex
+              label="11 Bond premium"
+              :styling="inputStyle"
+            />
+          </v-row>
+
+          <v-row class="row">
+            <inputIndex
+              label="12 Bond premium on Treasury obligations"
+              :styling="inputStyle"
+            />
+            <inputIndex
+              label="13 Bond premium on tax-exempt bond"
+              :styling="inputStyle"
+            />
+          </v-row>
+
+          <v-row class="row">
+            <inputIndex
+              label="14 Tax-exempt and tax credit bond CUSIP no."
+              :styling="inputStyle"
+            />
+            <selects
+              label="State"
+              :stylings="inputStyle"
+            />
+          </v-row>
+
+          <v-row class="row">
+            <inputIndex
+              label="16 State identification no."
+              :styling="inputStyle"
+            />
+            <inputIndex
+              label="17 State tax withheld"
+              :styling="inputStyle"
+            />
           </v-row>
 
           <v-row class="row btn">
@@ -250,7 +298,5 @@ export default {
 .btn{
   margin-bottom: 32px;
 }
-.data{
-  margin-left: 10px;
-}
 </style>
+
