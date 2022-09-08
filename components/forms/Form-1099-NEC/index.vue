@@ -4,22 +4,114 @@
         <v-row cols="12">
           <h2 class="paragraph">2021 Form 1099-NEC</h2>
         </v-row>
-        <v-row cols="12" style="border: 2px solid; margin-top: 108px">
-          <v-col>
+
+        <v-row cols="12" style="margin-top: 108px">
+          <v-col cols="6">
             <h2 class="payer">Payer Details</h2>
           </v-col>
-          <v-col>
-            <v-row class="select_payer">
+
+          <v-col cols="6">
+            <v-row class="d-flex justify-end select_payer">
                <selects
                  :stylings="customStyle"
                />
                <index-button
                  button="+ Add Payer"
-                 color="warning"
+                 color="#F4B42A"
                />
             </v-row>
           </v-col>
         </v-row>
+        <v-row>
+          <details-index
+            number=1
+            text="Next, select a previously entered recipient or choose to add a new recipient."
+          />
+        </v-row>
+      <v-row>
+        <div class="rec-details">
+          <h2 class="payer">Recipient Details</h2>
+          <selects
+            :stylings="customStyle"
+          />
+        </div>
+      </v-row>
+      <v-row>
+        <details-index
+          number=2
+          text="Next, select a previously entered recipient or choose to add a new recipient."
+        />
+      </v-row>
+
+      <v-row>
+        <income
+          income="Income"
+          income-text="If your State is not part of the Combined Federal/State Filing program, you may check to file State Tax information directly to that State. A rate of $1.00 per form will be added to your cart. Supported states are: DC, GA, IL, KS, MI, NC, OR, RI, VA, VT, WI."
+        />
+      </v-row>
+
+      <v-row>
+        <v-form class="form">
+         <v-row class="row">
+             <inputIndex
+               label="Nonemployee compensation"
+               :styling="inputStyle"
+             />
+             <inputIndex
+               label="Federal income tax withheld"
+               :styling="inputStyle"
+             />
+         </v-row>
+          <v-row>
+            <div class="checkbox">
+              <checkbox
+                checkbox-label="Payer made direct sales totaling $5,000 or more of consumer products to recipient for resale"
+              />
+            </div>
+          </v-row>
+         <v-row class="row">
+             <inputIndex
+               label="Federal income tax withheld"
+               :styling="inputStyle"
+             />
+             <inputIndex
+               label="State tax withheld"
+               :styling="inputStyle"
+             />
+         </v-row>
+         <v-row class="row">
+           <selects
+             :stylings="inputStyle"
+           />
+           <inputIndex
+             label="Payer's state no."
+             :styling="inputStyle"
+           />
+         </v-row>
+         <v-row>
+           <div class="row_state">
+             <inputIndex
+               label="State income"
+               :styling="inputStyle"
+             />
+           </div>
+         </v-row>
+         <v-row class="row btn">
+           <index-button
+             button="Save"
+             color="#F4B42A"
+             :style="buttonStyl"
+           />
+           <index-button
+             button="Cancel"
+             color="white"
+             :style="buttonStyl"
+           />
+         </v-row>
+
+        </v-form>
+      </v-row>
+
     </v-container>
   </v-app>
 </template>
@@ -27,15 +119,42 @@
 <script>
 import selects from "~/components/selects";
 import IndexButton from "~/components/buttons";
+import detailsIndex from "~/components/details";
+import income from "~/components/Income"
+import inputIndex from "~/components/inputs";
+import checkbox from "~/components/checkbox";
 export default {
   name: "indexComponent",
-  components: {IndexButton, selects},
+  components: {
+    IndexButton,
+    selects,
+    detailsIndex,
+    income,
+    inputIndex,
+    checkbox
+  },
   data(){
     return {
       customStyle: {
         'width': '200px',
         'height': '48px',
         'margin-right': '8px'
+      },
+      inputStyle: {
+      'width': '508px'
+      },
+      buttonStyl: {
+        'width': '508px',
+        'font-family': 'Neue Haas Grotesk Text Pro',
+        'font-style': 'normal',
+        'font-weight': 400,
+        'font-size': '16px',
+        'line-height': '20px',
+        'color': '#6F6F6F',
+        'flex': 'none',
+        'order': 0,
+        'flex-grow': 0,
+        'border': '1px solid #BFBFBF',
       }
     }
   }
@@ -68,4 +187,39 @@ export default {
     line-height: 24px;
     color: #000000;
   }
+  .rec-details{
+    display: flex;
+    width: 1080px;
+    margin-top: 96px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .form{
+    background: #FFFFFF;
+    box-shadow: 2px 2px 10px rgba(210, 209, 223, 0.3);
+    border-radius: 10px;
+    margin-top: 42px;
+    padding: 36px 24px 36px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+  }
+  .row{
+    display: flex;
+    justify-content: space-around;
+  }
+  .row_state{
+    width: 100%;
+    margin-left: 10px;
+  }
+  .checkbox{
+    width: 100%;
+    margin-left: 10px;
+    margin-bottom: 15px;
+  }
+.btn{
+  margin-bottom: 32px;
+}
 </style>
