@@ -1,12 +1,21 @@
 <template>
   <div>
-    <v-select
-      :style="getStyle"
+<!--    <v-select-->
+<!--      :style="getStyle"-->
+<!--      :items="items"-->
+<!--      label="Outlined style"-->
+<!--      dense-->
+<!--      outlined-->
+<!--    ></v-select>-->
+    <v-autocomplete
       :items="items"
-      label="Outlined style"
+      :style="getStyle"
+      cache-items
+      flat
       dense
+      :label="label"
       outlined
-    ></v-select>
+    ></v-autocomplete>
   </div>
 </template>
 <script>
@@ -20,6 +29,7 @@ export default {
   props: {
     items: Object,
     stylings: Object,
+    label: String
   },
   computed: {
     getStyle() {

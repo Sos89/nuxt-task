@@ -14,6 +14,7 @@
             <v-row class="d-flex justify-end select_payer">
                <selects
                  :stylings="customStyle"
+                 label="Select Payer"
                />
                <index-button
                  button="+ Add Payer"
@@ -24,7 +25,7 @@
         </v-row>
         <v-row>
           <details-index
-            number=1
+            number = 1
             text="Next, select a previously entered recipient or choose to add a new recipient."
           />
         </v-row>
@@ -33,12 +34,13 @@
           <h2 class="payer">Recipient Details</h2>
           <selects
             :stylings="customStyle"
+            label="Select Payer"
           />
         </div>
       </v-row>
       <v-row>
         <details-index
-          number=2
+          number = 2
           text="Next, select a previously entered recipient or choose to add a new recipient."
         />
       </v-row>
@@ -54,7 +56,7 @@
         <v-form class="form">
          <v-row class="row">
              <inputIndex
-               label="Nonemployee compensation"
+               label="None employee compensation"
                :styling="inputStyle"
              />
              <inputIndex
@@ -82,6 +84,7 @@
          <v-row class="row">
            <selects
              :stylings="inputStyle"
+             label="State"
            />
            <inputIndex
              label="Payer's state no."
@@ -100,7 +103,7 @@
            <index-button
              button="Save"
              color="#F4B42A"
-             :style="buttonStyl"
+             :style="saveButton"
            />
            <index-button
              button="Cancel"
@@ -138,10 +141,13 @@ export default {
       customStyle: {
         'width': '200px',
         'height': '48px',
-        'margin-right': '8px'
+        'background': '#E5E5E5',
+        'margin-right': '8px',
+        'border-radius': '10px',
       },
       inputStyle: {
-      'width': '508px'
+        'width': '508px',
+        'border-radius': '10px'
       },
       buttonStyl: {
         'width': '508px',
@@ -155,7 +161,20 @@ export default {
         'order': 0,
         'flex-grow': 0,
         'border': '1px solid #BFBFBF',
-      }
+      },
+      saveButton: {
+        'width': '508px',
+        'font-family': 'Neue Haas Grotesk Text Pro',
+        'font-style': 'normal',
+        'font-weight': 400,
+        'font-size': '16px',
+        'line-height': '20px',
+        'color': 'white',
+        'flex': 'none',
+        'order': 0,
+        'flex-grow': 0,
+        'border': '1px solid #BFBFBF',
+      },
     }
   }
 }
@@ -168,8 +187,6 @@ export default {
     padding-left: 280px;
     padding-right: 280px;
   }
-  .container{
-  }
   .paragraph{
     font-family: 'Neue Haas Grotesk Text Pro';
     font-style: normal;
@@ -178,6 +195,7 @@ export default {
     line-height: 38px;
     color: #000000;
     margin-top: 154px;
+    margin-right: auto;
   }
   .payer{
     font-family: 'Neue Haas Grotesk Text Pro';

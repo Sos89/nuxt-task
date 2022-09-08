@@ -3,6 +3,8 @@
     <v-text-field
       :label="label"
       :style="getStyle"
+      :type="type"
+      :append-icon="icon"
       outlined
       dense
     ></v-text-field>
@@ -13,7 +15,9 @@ export default {
   name: 'input-index',
   props: {
     label: String,
-    styling: Object
+    styling: Object,
+    type: String,
+    icon: String
   },
   computed: {
     getStyle() {

@@ -12,17 +12,21 @@
           <div class="app_select_div">
             <v-img
               src="/image/Rectangle-30.png"
-              max-height="36"
+              max-height="32"
               max-width="38"
               class="img"
             >
             </v-img>
-            <v-select
+            <v-autocomplete
               :items="states"
-              label="Solo field"
+              cache-items
+              flat
               dense
+              hide-no-data
+              hide-details
+              label="Username"
               solo
-            ></v-select>
+            ></v-autocomplete>
           </div>
         </v-row>
       </v-row>
@@ -57,18 +61,19 @@ export default {
 .app_bar_div{
     background: #FFFFFF;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-  width: 1920px;
+    width: 1920px;
     height: 64px;
   }
   .app_select_div{
     display: flex;
     width: 202px;
     height: 44px;
-    /*border: 1px solid #EDEDED;*/
+    border: 1px solid #EDEDED;
     border-radius: 10px;
     margin: 10px 24px 10px 24px;
   }
   .img{
     margin-right: 8px;
+    margin-top: 5px;
   }
 </style>
