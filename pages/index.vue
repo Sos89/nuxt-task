@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col cols="12" sm="8" md="6">
-<!--        <form1099-n-e-c/>-->
+        <form1099-n-e-c/>
 <!--        <form1098/>-->
 <!--        <form1098T/>-->
 <!--        <form-w2/>-->

@@ -1,8 +1,6 @@
 <template>
 <v-container>
-  <v-row cols="12">
-    <h2 class="paragraph">2021 Form 1042-S</h2>
-  </v-row>
+
 
   <v-row cols="12" style="margin-top: 108px">
     <v-col cols="6">
@@ -12,7 +10,7 @@
     <v-col cols="6">
       <v-row class="d-flex justify-end select_payer">
         <selects
-          :stylings="customStyle"
+          :stylings="customPayer"
           label="Select Payer"
         />
         <index-button
@@ -55,6 +53,24 @@ export default {
     selects,
     detailsIndex,
     inputIndex
+  },
+  data(){
+    return {
+      customStyle: {
+        'width': '200px',
+        'height': '48px',
+        'background': '#E5E5E5',
+        'margin-right': '8px',
+        'border-radius': '10px',
+      },
+      customPayer: {
+        'width': '200px',
+        'height': '40px',
+        'background': '#fff',
+        'margin-right': '8px',
+        'border-radius': '10px',
+      },
+    }
   }
 }
 </script>

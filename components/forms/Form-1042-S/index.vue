@@ -1,8 +1,10 @@
 <template>
   <v-app class="bg">
     <v-container fluid class="container">
+      <v-row cols="12">
+        <h2 class="paragraph">2021 Form 1042-S</h2>
+      </v-row>
       <details-component/>
-
       <v-row>
         <income
           income="Income"
@@ -94,7 +96,7 @@
             <div class="row_state">
               <selects
                 label="8 Tax withheld by other agents"
-                :styling="addressInput"
+                :stylings="addressInput"
               />
             </div>
 
@@ -288,6 +290,7 @@
             <inputIndex
               label="13l Recipient's date of birth"
               :styling="inputStyle"
+              icon="fa-calendar"
             />
             <inputIndex
               label="14a Primary Withholding Agent's Name 1 (if applicable)"

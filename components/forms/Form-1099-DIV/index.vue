@@ -2,48 +2,9 @@
   <v-app class="bg">
     <v-container fluid class="container">
       <v-row cols="12">
-        <h2 class="paragraph">2021 Form 1099-B</h2>
+        <h2 class="paragraph">2021 Form 1099-DIV</h2>
       </v-row>
-
-      <v-row cols="12" style="margin-top: 108px">
-        <v-col cols="6">
-          <h2 class="payer">Payer Details</h2>
-        </v-col>
-
-        <v-col cols="6">
-          <v-row class="d-flex justify-end select_payer">
-            <selects
-              :stylings="customStyle"
-              label="Select Payer"
-            />
-            <index-button
-              button="+ Add Payer"
-              color="#F4B42A"
-            />
-          </v-row>
-        </v-col>
-      </v-row>
-      <v-row>
-        <details-index
-          number = 1
-          text="Next, select a previously entered recipient or choose to add a new recipient."
-        />
-      </v-row>
-      <v-row>
-        <div class="rec-details">
-          <h2 class="payer">Recipient Details</h2>
-          <selects
-            :stylings="customStyle"
-            label="Select Payer"
-          />
-        </div>
-      </v-row>
-      <v-row>
-        <details-index
-          number = 2
-          text="Next, select a previously entered recipient or choose to add a new recipient."
-        />
-      </v-row>
+      <details-component/>
 
       <v-row>
         <income
@@ -200,6 +161,7 @@ import detailsIndex from "~/components/details";
 import income from "~/components/Income"
 import inputIndex from "~/components/inputs";
 import checkbox from "~/components/checkbox";
+import detailsComponent from "~/components/detailsComponent";
 export default {
   name: "index",
   components: {
@@ -208,7 +170,8 @@ export default {
     detailsIndex,
     income,
     inputIndex,
-    checkbox
+    checkbox,
+    detailsComponent
   },
   data(){
     return {
@@ -264,31 +227,6 @@ export default {
   width: 1640px;
   padding-left: 280px;
   padding-right: 280px;
-}
-.paragraph{
-  font-family: 'Neue Haas Grotesk Text Pro';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 38px;
-  color: #000000;
-  margin-top: 154px;
-  margin-right: auto;
-}
-.payer{
-  font-family: 'Neue Haas Grotesk Text Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  color: #000000;
-}
-.rec-details{
-  display: flex;
-  width: 1080px;
-  margin-top: 96px;
-  align-items: center;
-  justify-content: space-between;
 }
 .form{
   background: #FFFFFF;

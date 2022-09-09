@@ -55,17 +55,20 @@ export default {
   margin-left: 50px;
   cursor: pointer;
 }
-/*li :hover{*/
-/*  background: #2B014C;*/
-/*  color: #E5E5E5;*/
-/*}*/
+a.nuxt-link-active {
+  font-weight: bold;
+}
+a.nuxt-link-exact-active {
+  color: #2B014C;
+}
 .dropdown-menu{
   color: #2B014C;
 }
 .icon{
   margin-right: 16px;
 }
-ul{
+li{
+  margin: 5px;
   list-style: none;
 }
 .dropdown-icon{
