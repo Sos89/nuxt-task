@@ -127,7 +127,7 @@ import income from "~/components/Income"
 import inputIndex from "~/components/inputs";
 import checkbox from "~/components/checkbox";
 export default {
-  name: "indexComponent",
+  name: "index",
   components: {
     IndexButton,
     selects,

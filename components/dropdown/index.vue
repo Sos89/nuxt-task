@@ -9,7 +9,7 @@
     </v-hover>
     <div class="dropdown-menu" v-if="menuToggleer">
       <ul class="ul" v-for="(value, key, index) in filings">
-        <li> <nuxt-link :to="value">{{key}}</nuxt-link></li>
+        <li> <nuxt-link class="link" :to="value">{{key}}</nuxt-link></li>
       </ul>
     </div>
   </div>
@@ -55,10 +55,10 @@ export default {
   margin-left: 50px;
   cursor: pointer;
 }
-li :hover{
-  background: #2B014C;
-  color: #E5E5E5;
-}
+/*li :hover{*/
+/*  background: #2B014C;*/
+/*  color: #E5E5E5;*/
+/*}*/
 .dropdown-menu{
   color: #2B014C;
 }
@@ -72,5 +72,16 @@ ul{
   font-size: 16px;
   width: calc(100% - 10px);
   margin-right: auto;
+}
+.link{
+  font-family: 'Neue Haas Grotesk Text Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
 }
 </style>

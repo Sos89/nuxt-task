@@ -12,7 +12,7 @@
 <!--        <form1099R/>-->
 <!--        <form1099-d-i-v/>-->
 <!--        <form1099-s/>-->
-        <form1042S/>
+<!--        <form1042S/>-->
       </v-col>
     </v-row>
   </v-container>
