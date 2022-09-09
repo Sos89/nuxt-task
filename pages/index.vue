@@ -10,7 +10,9 @@
 <!--        <form1099-c/>-->
 <!--        <form1099-i-n-t/>-->
 <!--        <form1099R/>-->
-        <form1099-d-i-v/>
+<!--        <form1099-d-i-v/>-->
+<!--        <form1099-s/>-->
+        <form1042S/>
       </v-col>
     </v-row>
   </v-container>
@@ -26,6 +28,8 @@ import form1099C from "~/components/forms/Form-1099-C";
 import form1099INT from "~/components/forms/Form-1099-INT";
 import form1099R from "~/components/forms/Form-1099-R";
 import form1099DIV from "~/components/forms/Form-1099-DIV";
+import form1099S from "~/components/forms/Form-1099-S";
+import form1042S from "~/components/forms/Form-1042-S";
 export default {
   name: 'IndexPage',
   components: {
@@ -37,7 +41,9 @@ export default {
     form1099C,
     form1099INT,
     form1099R,
-    form1099DIV
+    form1099DIV,
+    form1099S,
+    form1042S
   },
 }
 </script>
